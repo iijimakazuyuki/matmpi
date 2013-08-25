@@ -38,4 +38,13 @@ contains
 		write(n,*), m%neib_idx
 		write(n,*), m%idx
 	end subroutine
+	
+	subroutine write_unformatted_mat_mess(n,m)
+		type(mat_mess), intent(in) :: m
+		integer :: n
+		write(n), m%n
+		write(n), m%neib
+		write(n), m%neib_idx
+		write(n), m%idx
+	end subroutine
 end module
